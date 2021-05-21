@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Reverse a String</title>
+</head>
+<body>
+<input type="text" id="StringBox" value="type a word to reverse"> </input>
+<button class="Submit">Submit</button>
+<p id = "Replace"> Type a word in the box above and this text will show it in reverse!</p>
+<script type="text/javascript">
+	SubmitBTN = document.querySelector(".Submit");
+	SubmitBTN.addEventListener("click", () => {
+		let ReverseText = Reverse();
+	})
+	function Reverse() 
+	{
+		let text = document.getElementById("StringBox").value; 
+		let ReversedArray = [];
+		for (let i = text.length - 1; i >= 0; i--) {
+			ReversedArray.push(text[i]);
+		}
+		_ReversedString = ReversedArray.join("");
+		document.getElementById("Replace").innerHTML = _ReversedString;
+	}
+</script>
+</body>
+</html>
